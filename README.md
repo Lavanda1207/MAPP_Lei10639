@@ -1,4 +1,4 @@
-# Lista 3 – Desafio de Replicação
+#Desafio de Replicação
 
 ## Descrição
 
