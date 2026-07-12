@@ -35,12 +35,8 @@ O script realiza as seguintes etapas:
 ```
 .
 ├── data/
-│   └── base_lista3.xlsx
+│   └── base escuta dos municípios.xlsx
 │
-├── output/
-│   ├── figuras/
-│   ├── tabelas/
-│   └── sessionInfo.txt
 │
 ├── analise_lista3.R
 │
