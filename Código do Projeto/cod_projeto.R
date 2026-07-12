@@ -1,4 +1,4 @@
-# Lista 3 - Desafio de Replicacao
+# Desafio de Replicacao
 # Analise independente da base fornecida
 
 pacotes <- c("readxl", "dplyr", "tidyr", "stringr", "ggplot2", "readr", "tibble")
