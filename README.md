@@ -1,13 +1,14 @@
-## Desafio de Replicação
+# Desafio de Replicação
 
 ## Descrição
 
-Este repositório contém o código desenvolvido em **R** para o Desafio de Replicação da Lista 3.
+Este repositório contém o código, os dados e os documentos desenvolvidos para um projeto de replicação científica em linguagem **R**.
 
-O objetivo do trabalho é reproduzir e avaliar os principais resultados do estudo:
+O objetivo do projeto é reproduzir e avaliar os principais resultados do estudo:
 
 > **Lei 10.639/03: a atuação das Secretarias Municipais de Educação no ensino de história e cultura africana e afro-brasileira.**
-> Instituto Alana & Geledés – Instituto da Mulher Negra (2023).
+
+Instituto Alana & Geledés – Instituto da Mulher Negra (2023).
 
 A análise foi realizada utilizando a base de dados disponibilizada juntamente com o artigo, contendo informações de **1.187 Secretarias Municipais de Educação**.
 
@@ -15,30 +16,37 @@ A análise foi realizada utilizando a base de dados disponibilizada juntamente c
 
 # Objetivos
 
-O script realiza as seguintes etapas:
+O projeto contempla as seguintes etapas:
 
 - Importação da base de dados;
-- Tratamento do cabeçalho da planilha;
-- Auditoria inicial dos dados;
+- Tratamento e organização dos dados;
+- Auditoria da base;
 - Construção dos principais indicadores apresentados no artigo;
 - Estatísticas descritivas;
 - Testes de robustez;
-- Construção de índices alternativos de institucionalização;
+- Construção de índices alternativos;
 - Geração de tabelas;
 - Geração de gráficos;
 - Registro do ambiente computacional (`sessionInfo()`).
 
 ---
 
-# Estrutura do projeto
+# Estrutura do repositório
 
 ```
-.
-├── data/
-│   └── base escuta dos municípios.xlsx
+MAPP_Lei10639/
 │
+├── Artigo Base/
+│   └── Relatório original utilizado na replicação
 │
-├── analise_lista3.R
+├── Código do Projeto/
+│   └── Scripts em R para importação, tratamento, análise e geração dos resultados
+│
+├── Dados/
+│   └── Base Escuta dos Municípios.xlsx
+│
+├── Artigo Final Kenya/
+│   └── (Versão final do artigo desenvolvido durante o projeto)
 │
 └── README.md
 ```
@@ -66,14 +74,14 @@ Caso algum pacote não esteja instalado:
 
 ```r
 install.packages(c(
-"readxl",
-"dplyr",
-"tidyr",
-"stringr",
-"ggplot2",
-"janitor",
-"purrr",
-"readr"
+  "readxl",
+  "dplyr",
+  "tidyr",
+  "stringr",
+  "ggplot2",
+  "janitor",
+  "purrr",
+  "readr"
 ))
 ```
 
@@ -81,47 +89,43 @@ install.packages(c(
 
 # Como executar
 
-1. Coloque o arquivo da base dentro da pasta `data/`.
+1. Abra o script localizado na pasta **Código do Projeto**.
 
-2. Abra o arquivo:
-
-```
-analise_lista3.R
-```
+2. Certifique-se de que a base de dados esteja disponível na pasta **Dados**.
 
 3. Execute o script completo.
 
-Ao final da execução serão gerados:
+Ao final da execução serão produzidos:
 
+- indicadores;
 - tabelas;
 - gráficos;
-- indicadores;
-- índices;
+- estatísticas descritivas;
+- índices de robustez;
 - informações da sessão do R.
 
 ---
 
 # Resultados produzidos
 
-O script produz automaticamente:
+O código gera automaticamente:
 
 - Auditoria da base de dados;
 - Indicadores de implementação da Lei nº 10.639/03;
 - Estatísticas descritivas;
-- Índice amplo de institucionalização;
-- Índice restrito de institucionalização;
-- Comparações entre estados;
-- Testes de robustez;
-- Gráficos de apoio;
-- Arquivo `sessionInfo()`.
+- Índices alternativos de institucionalização;
+- Comparações entre grupos;
+- Tabelas;
+- Gráficos;
+- Registro do ambiente computacional (`sessionInfo()`).
 
 ---
 
 # Limitações
 
-Este projeto realiza uma **replicação independente** dos principais resultados apresentados no relatório.
+Este projeto realiza uma **replicação independente** dos principais resultados apresentados no estudo.
 
-Embora a base de dados e a documentação metodológica estejam disponíveis, os **scripts originais utilizados pelos autores não foram disponibilizados**, impossibilitando a reprodução exata do fluxo computacional empregado no estudo original.
+Embora a base de dados e a documentação metodológica estejam disponíveis, os **scripts computacionais originais utilizados pelos autores não foram disponibilizados**, impossibilitando a reprodução exata do fluxo analítico desenvolvido no estudo original.
 
 ---
 
@@ -137,6 +141,6 @@ São Paulo, 2023.
 
 # Licença
 
-Este código foi desenvolvido exclusivamente para fins acadêmicos como parte de um exercício de replicação científica.
+Este repositório foi desenvolvido exclusivamente para fins acadêmicos.
 
-A base de dados e o relatório pertencem aos respectivos autores e instituições responsáveis.
+A base de dados, o relatório e demais materiais pertencem aos respectivos autores e instituições responsáveis.
